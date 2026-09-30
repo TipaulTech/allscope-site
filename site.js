@@ -6,11 +6,11 @@ const MENUS = [
   { label: 'Repairs', cols: 3,
     intro: ['Repairs for the devices you rely on', `Diagnostic ${DIAG}, deducted from your repair. 90-day warranty on every fix.`, ['/#booking', 'Book a repair']],
     items: [
-      ['phone', 'Phone', 'Screens, batteries, charging ports', '/#repairs'],
-      ['tablet', 'Tablet', 'iPad & Android tablets', '/#repairs'],
-      ['computer', 'Computer', 'Laptops & desktops', '/#repairs'],
-      ['console', 'Game console', 'Controllers, ports, overheating', '/#repairs'],
-      ['other', 'Something else', 'Smartwatches, headphones & more', '/#repairs'],
+      ['phone', 'Phone', 'Screens, batteries, charging ports', '/repairs.html'],
+      ['tablet', 'Tablet', 'iPad & Android tablets', '/repairs.html'],
+      ['computer', 'Computer', 'Laptops & desktops', '/repairs.html'],
+      ['console', 'Game console', 'Controllers, ports, overheating', '/repairs.html'],
+      ['other', 'Something else', 'Smartwatches, headphones & more', '/repairs.html'],
       ['warranty', '90-day warranty', 'Parts & labor covered', '/refund.html#warranty'],
     ] },
   { label: 'Services', cols: 4,
@@ -18,10 +18,10 @@ const MENUS = [
     items: [
       ['camera', 'Security cameras', 'Install, NVR & app setup', '/#services'],
       ['wifi', 'Network & Wi-Fi', 'Mesh, cabling, secure setup', '/#services'],
-      ['transfer', 'Data transfer', 'Move everything to a new device', '/#device-care'],
-      ['virus', 'Virus removal', 'Malware cleanup & protection', '/#device-care'],
-      ['tuneup', 'PC tune-up', 'Boost speed & performance', '/#device-care'],
-      ['recovery', 'Device recovery', 'Restore data or factory reset', '/#device-care'],
+      ['transfer', 'Data transfer', 'Move everything to a new device', '/repairs.html#device-care'],
+      ['virus', 'Virus removal', 'Malware cleanup & protection', '/repairs.html#device-care'],
+      ['tuneup', 'PC tune-up', 'Boost speed & performance', '/repairs.html#device-care'],
+      ['recovery', 'Device recovery', 'Restore data or factory reset', '/repairs.html#device-care'],
       ['youtube', 'YouTube consulting', 'Grow your channel — $99/session', '/#services'],
       ['app', 'App creation', 'Custom apps for your business', '/#services'],
     ] },
@@ -71,7 +71,7 @@ document.getElementById('site-footer').outerHTML = `
       <a href="tel:+19544493719">+1 (954) 449-3719</a><br>
       <a href="mailto:contact@allscopeholdingsllc.com">contact@allscopeholdingsllc.com</a><br>
       Support: <a href="mailto:support@allscopeholdingsllc.com">support@allscopeholdingsllc.com</a></div>
-    <div><h5>Services</h5><ul><li><a href="/#repairs">Device repairs</a></li><li><a href="/#services">Cameras & networks</a></li><li><a href="/#device-care">Device care</a></li><li><a href="/#booking">Book a call</a></li></ul></div>
+    <div><h5>Services</h5><ul><li><a href="/repairs.html">Device repairs</a></li><li><a href="/#services">Cameras & networks</a></li><li><a href="/repairs.html#device-care">Device care</a></li><li><a href="/#booking">Book a call</a></li></ul></div>
     <div><h5>Company</h5><ul><li><a href="/#projects">My Projects</a></li><li><a href="${AMAZON}" target="_blank" rel="noopener sponsored">Shop</a></li><li><a href="/#faq">FAQ</a></li></ul></div>
     <div><h5>Legal</h5><ul><li><a href="/terms.html">Terms of Service</a></li><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/refund.html">Refund & Warranty</a></li></ul></div>
   </div>
