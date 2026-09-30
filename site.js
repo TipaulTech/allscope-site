@@ -43,6 +43,11 @@ const MENUS = [
       ['calendar', 'Book a call', 'Free 15-minute call', '/#booking'],
       ['warranty', 'Warranty & refunds', 'Our 90-day promise', '/refund.html'],
     ] },
+  { label: 'My Projects', cols: 1,
+    intro: ['Products we build', 'GPC Studio: the AI video studio for YouTube creators. Free plan available.', ['https://gpcstudio.app', 'Open GPC Studio']],
+    items: [
+      ['../gpc-dashboard', 'GPC Studio', 'AI video creation studio — click to open the app', 'https://gpcstudio.app'],
+    ] },
 ];
 
 const svg = d => `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
@@ -53,7 +58,7 @@ const ICON = {
   help: svg('<circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/>'),
 };
 
-const ext = u => /^https?:/.test(u) ? ' target="_blank" rel="noopener sponsored"' : '';
+const ext = u => /amazon\./.test(u) ? ' target="_blank" rel="noopener sponsored"' : /^https?:/.test(u) ? ' target="_blank" rel="noopener"' : '';
 const card = ([ic, t, d, href, photo]) =>
   `<a class="mc" href="${href}"${ext(href)}><span class="i${photo ? ' photo' : ''}" style="background-image:url(/img/icons/${ic}.jpg)"></span><b>${t}</b><small>${d}</small></a>`;
 
@@ -63,9 +68,8 @@ document.getElementById('site-nav').outerHTML = `
   <ul class="menu" id="menu">
     ${MENUS.map(m => `<li><button type="button">${m.label}</button><div class="mega"><div class="mega-in">
       <div class="mega-intro"><h4>${m.intro[0]}</h4><p>${m.intro[1]}</p><a class="btn sm" href="${m.intro[2][0]}"${ext(m.intro[2][0])}>${m.intro[2][1]}</a>${m.note ? `<small>${m.note}</small>` : ''}</div>
-      <div class="mega-grid${m.cols === 4 ? ' g4' : ''}">${m.items.map(card).join('')}</div>
+      <div class="mega-grid${m.cols === 4 ? ' g4' : m.cols === 1 ? ' solo' : ''}">${m.items.map(card).join('')}</div>
     </div></div></li>`).join('')}
-    <li><a href="/#projects">My Projects</a></li>
   </ul>
   <a class="btn sm" href="/#booking">Book now →</a>
   <button class="burger" type="button" aria-label="Menu">${ICON.menu}</button>
