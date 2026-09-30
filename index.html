@@ -3,165 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>All Scope Holdings LLC — Tech Installation & Digital Projects</title>
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<title>All Scope Holdings LLC — Device Repair, Cameras & Networks in Broward & Miami</title>
+<meta name="description" content="Phone, tablet, computer and game console repair, security camera and Wi-Fi installation in Broward & Miami-Dade, Florida. 90-day warranty.">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#07061a; --bg2:#0d0b2b; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.09);
-  --text:#eceaff; --muted:#a09cc9; --p1:#6d5dfc; --p2:#9b8cff; --p3:#3fd0ff; --ok:#3ee6a0;
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
-h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15}
-a{color:inherit;text-decoration:none}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-.grad{background:linear-gradient(90deg,var(--p2),var(--p3));-webkit-background-clip:text;background-clip:text;color:transparent}
-
-/* background */
-.stars{position:fixed;inset:0;z-index:-2;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse at top,#000 20%,transparent 75%);opacity:.35}
-.glow{position:absolute;border-radius:50%;filter:blur(90px);z-index:-1;pointer-events:none}
-.g1{width:560px;height:560px;background:#4b35ff55;top:-160px;left:50%;transform:translateX(-50%);animation:pulse 8s ease-in-out infinite}
-.g2{width:380px;height:380px;background:#2bb8ff33;top:320px;right:-120px;animation:pulse 10s ease-in-out infinite reverse}
-@keyframes pulse{50%{opacity:.55;transform:translateX(-50%) scale(1.12)}}
-.g2{animation-name:pulse2}@keyframes pulse2{50%{opacity:.5;transform:scale(1.15)}}
-
-/* nav */
-nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(7,6,26,.6);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
-.logo{display:flex;align-items:center;gap:10px;font-family:Sora;font-weight:800;font-size:18px}
-.links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
-.links a:hover{color:#fff}
-.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,var(--p1),#8a6bff);color:#fff;font-weight:600;font-size:14px;border:0;cursor:pointer;box-shadow:0 8px 30px #6d5dfc55;transition:transform .2s,box-shadow .2s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px #6d5dfc88}
-.btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none}
-.btn.sm{padding:9px 18px}
-
-/* hero */
-.hero{position:relative;padding:90px 0 70px}
-.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center}
-.pill{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted);background:var(--card)}
-.pill b{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok)}
-.hero h1{font-size:clamp(36px,5vw,58px);margin:20px 0 18px;font-weight:800}
-.hero p{color:var(--muted);font-size:17px;max-width:520px}
-.cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
-
-/* hero visual */
-.stage{position:relative;height:440px}
-.panel{position:absolute;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(10px);padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
-.float{animation:float 6s ease-in-out infinite}
-.float.d2{animation-delay:-2s}.float.d3{animation-delay:-4s}
-@keyframes float{50%{transform:translateY(-14px)}}
-.p-main{inset:30px 40px 60px 30px}
-.p-main h4{font-size:13px;color:var(--muted);font-weight:500;display:flex;justify-content:space-between}
-.cams{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.cam{height:92px;border-radius:12px;background:linear-gradient(135deg,#1b1646,#0f1c3a) center/cover no-repeat;position:relative;overflow:hidden;border:1px solid var(--line)}
-.cam time{position:absolute;right:8px;bottom:5px;font:600 9px/1 ui-monospace,Consolas,monospace;color:#fff;text-shadow:0 1px 2px #000;opacity:.9}
-.cam:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(109,93,252,.25),transparent);animation:scan 3.2s linear infinite}
-.cam:nth-child(2):after{animation-delay:-.8s}.cam:nth-child(3):after{animation-delay:-1.6s}.cam:nth-child(4):after{animation-delay:-2.4s}
-@keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
-.cam span{position:absolute;left:8px;top:6px;font-size:10px;color:#fff;text-shadow:0 1px 2px #000;display:flex;gap:5px;align-items:center}
-.cam span:before{content:"";width:6px;height:6px;border-radius:50%;background:#ff4d6d;animation:blink 1.2s infinite}
-@keyframes blink{50%{opacity:.2}}
-.p-net{right:0;top:0;width:190px}
-.p-net small{color:var(--muted);font-size:11px}
-.p-net strong{display:block;font-family:Sora;font-size:26px;margin:2px 0}
-.bars{display:flex;gap:5px;align-items:flex-end;height:44px}
-.bars i{flex:1;border-radius:4px;background:linear-gradient(var(--p2),var(--p1));animation:bar 2.4s ease-in-out infinite}
-.bars i:nth-child(2n){animation-delay:-.6s}.bars i:nth-child(3n){animation-delay:-1.2s}
-@keyframes bar{0%,100%{height:30%}50%{height:100%}}
-.p-book{left:0;bottom:0;width:230px;display:flex;gap:12px;align-items:center}
-.p-book .ic{width:40px;height:40px;border-radius:12px;background:#3ee6a022;display:grid;place-items:center;color:var(--ok)}
-.p-book b{font-size:13px;display:block}.p-book small{font-size:11px;color:var(--muted)}
-
-/* stats */
-.hero .wrap.full{display:block;margin-top:60px}
-.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}
-.stat{padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
-.stat strong{font-family:Sora;font-size:30px}
-.stat p{color:var(--muted);font-size:13px}
-
-/* sections */
-section{padding:56px 0;position:relative}
-.head{text-align:center;max-width:640px;margin:0 auto 36px}
-.head .pill{margin-bottom:14px}
-.head h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:12px}
-.head p{color:var(--muted)}
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.card{position:relative;padding:28px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));overflow:hidden;transition:transform .3s,border-color .3s}
-.card:before{content:"";position:absolute;inset:-1px;border-radius:20px;padding:1px;background:linear-gradient(140deg,var(--p1),transparent 40%,transparent 60%,var(--p3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s}
-.card:hover{transform:translateY(-6px)}.card:hover:before{opacity:1}
-.card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#6d5dfc33,#3fd0ff22);margin-bottom:18px;color:var(--p2)}
-.card h3{font-size:19px;margin-bottom:8px}
-.card p{color:var(--muted);font-size:14px}
-.card .price{margin-top:16px;font-size:13px;color:var(--p2);font-weight:600}
-.card ul{list-style:none;margin-top:12px;font-size:13px;color:var(--muted)}
-.card li:before{content:"✓  ";color:var(--ok)}
-.card .ph{margin:-28px -28px 22px;height:190px;background:linear-gradient(135deg,#1b1646,#0f1c3a) center/cover no-repeat;position:relative}
-.card .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(7,6,26,.85))}
-.card .ph + .ic{margin-top:-48px;position:relative;z-index:1;background:#141038;border:1px solid var(--line)}
-
-/* shop */
-.shop{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.item{padding:0;display:flex;flex-direction:column}
-.item .ph{margin:0;height:170px}
-.item .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
-.item h3{font-size:16px;margin-bottom:4px}
-.item p{font-size:13px;flex:1}
-.item .row{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
-.item .row b{font-family:Sora;color:var(--p2)}
-
-/* process */
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
-.steps:before{content:"";position:absolute;top:34px;left:16%;right:16%;height:1px;background:linear-gradient(90deg,transparent,var(--p1),var(--p3),transparent)}
-.step{text-align:center}
-.step .n{width:68px;height:68px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;font-family:Sora;font-weight:700;background:var(--bg2);border:1px solid var(--p1);box-shadow:0 0 30px #6d5dfc55;position:relative}
-.step h3{font-size:17px;margin-bottom:6px}.step p{color:var(--muted);font-size:14px}
-
-/* projects */
-.feat{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:40px}
-.feat .tag{display:inline-block;font-size:11px;padding:4px 10px;border-radius:999px;background:#6d5dfc33;color:var(--p2);margin-bottom:14px}
-.feat h3{font-size:30px}
-.feat .art{position:absolute;right:-60px;top:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,#6d5dfc55,transparent 70%)}
-.plans{display:grid;gap:10px;position:relative}
-.plans div{display:grid;grid-template-columns:90px 1fr auto;align-items:center;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(7,6,26,.5);font-size:14px}
-.plans span{color:var(--muted)}.plans em{font-style:normal;font-family:Sora;font-weight:600;color:var(--p2)}
-.plans small{color:var(--muted);font-size:12px;text-align:right}
-
-/* booking */
-.cal{padding:24px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.01))}
-
-footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:13px}
-footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
-footer nav{position:static;background:none;border:0;backdrop-filter:none;display:flex;gap:18px}
-
-/* reveal */
-.rv{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
-.rv.in{opacity:1;transform:none}
-
-@media (max-width:900px){
-  .hero .wrap{grid-template-columns:1fr}
-  .grid3,.steps,.stats,.shop{grid-template-columns:1fr 1fr}
-  .feat{grid-template-columns:1fr;padding:28px}
-  .links{display:none}
-  .steps:before{display:none}
-}
-@media (max-width:560px){section{padding:32px 0}.head{margin-bottom:24px}.hero{padding:48px 0 32px}.grid3,.steps,.stats,.shop{grid-template-columns:1fr}.stage{height:520px}.p-main{inset:135px 0 60px 0}.p-net{width:170px;padding:14px}}
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
-</style>
+<link rel="stylesheet" href="/style.css?v=2">
 </head>
 <body>
 <div class="stars"></div>
-
-<nav><div class="wrap">
-  <a class="logo" href="#"><img src="img/logo-nav.png" alt="All Scope Holdings" height="52"></a>
-  <div class="links"><a href="#services">Services</a><a href="#shop">Shop</a><a href="#process">Process</a><a href="#projects">My Projects</a><a href="#booking">Booking</a><a href="#contact">Contact</a></div>
-  <a class="btn sm" href="#booking">Book now →</a>
-</div></nav>
+<div id="site-nav"></div>
 
 <header class="hero">
   <div class="glow g1"></div><div class="glow g2"></div>
@@ -169,8 +22,8 @@ footer nav{position:static;background:none;border:0;backdrop-filter:none;display
     <div class="rv">
       <span class="pill"><b></b> Now booking in Broward & Miami</span>
       <h1>Smart tech, <span class="grad">installed right</span> the first time.</h1>
-      <p>All Scope Holdings LLC installs security cameras, business networks and Wi-Fi, and sets up phones and laptops — plus builds digital products like GPC Studio.</p>
-      <div class="cta"><a class="btn" href="#booking">Book a service →</a><a class="btn ghost" href="#projects">See our projects</a></div>
+      <p>All Scope Holdings LLC repairs phones, tablets, computers and game consoles, installs security cameras and Wi-Fi networks — plus builds digital products like GPC Studio.</p>
+      <div class="cta"><a class="btn" href="#booking">Book a service →</a><a class="btn ghost" href="#repairs">What we fix</a></div>
     </div>
     <div class="stage rv">
       <div class="panel p-main float">
@@ -185,9 +38,42 @@ footer nav{position:static;background:none;border:0;backdrop-filter:none;display
     <div class="stat"><strong data-count="2">0</strong><strong> counties</strong><p>Broward & Miami-Dade served</p></div>
     <div class="stat"><strong data-count="15">0</strong><strong> min</strong><p>Free discovery call</p></div>
     <div class="stat"><strong data-count="24">0</strong><strong>h</strong><p>Callback time</p></div>
-    <div class="stat"><strong data-count="5">0</strong><strong></strong><p>Services under one roof</p></div>
+    <div class="stat"><strong data-count="90">0</strong><strong> days</strong><p>Warranty on repairs</p></div>
   </div></div>
 </header>
+
+<section style="padding-top:0">
+  <div class="wrap trust rv">
+    <div><img src="img/icons/warranty.jpg" alt=""><span><b>90-day warranty</b><small>Parts & labor on every repair</small></span></div>
+    <div><img src="img/icons/tuneup.jpg" alt=""><span><b>$29 diagnostic</b><small>Deducted from your repair</small></span></div>
+    <div><img src="img/icons/calendar.jpg" alt=""><span><b>We come to you</b><small>Home or office, Broward & Miami</small></span></div>
+    <div><img src="img/icons/contact.jpg" alt=""><span><b>Callback in 24h</b><small>Book a free 15-min call</small></span></div>
+  </div>
+</section>
+
+<section id="repairs">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">Repairs</span><h2>What can we <span class="grad">fix for you?</span></h2><p>Fast, careful repairs with quality parts — and a clear quote before any work starts.</p></div>
+    <div class="fix">
+      <a class="rv" href="#booking"><img src="img/icons/phone.jpg" alt=""><h3>Phone repair</h3><p>iPhone, Samsung, Google Pixel and more: cracked screens, batteries, charging ports, cameras. From $79.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/tablet.jpg" alt=""><h3>Tablet repair</h3><p>iPad and Android tablets: screens, batteries that won't hold a charge, buttons and ports.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/computer.jpg" alt=""><h3>Computer repair</h3><p>Laptops and desktops: screens, keyboards, storage upgrades, slow or crashing machines.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/console.jpg" alt=""><h3>Game console repair</h3><p>PlayStation, Xbox and Switch: HDMI ports, overheating, drifting controllers.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/other.jpg" alt=""><h3>Wearables & audio</h3><p>Smartwatches, headphones and small electronics — ask us about your device.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/camera.jpg" alt=""><h3>Camera systems</h3><p>Offline cameras, NVR issues, app access and full camera installations. From $149/camera.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/wifi.jpg" alt=""><h3>Network & Wi-Fi</h3><p>Dead zones, slow internet, new routers, mesh systems and Ethernet cabling. From $129.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/faq.jpg" alt=""><h3>Something else?</h3><p>Not on the list? Book a free 15-minute call and tell us what's going on.</p></a>
+    </div>
+
+    <h3 class="sub-h rv" id="device-care">Keep your devices <span class="grad">running strong</span></h3>
+    <div class="fix">
+      <a class="rv" href="#booking"><img src="img/icons/transfer.jpg" alt=""><h3>Data transfer</h3><p>Safely move photos, contacts and apps to your new device.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/virus.jpg" alt=""><h3>Virus removal</h3><p>Remove malware, pop-ups and unwanted software, then lock things down.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/tuneup.jpg" alt=""><h3>PC tune-up</h3><p>Clean-up, updates and optimization to bring back the speed.</p></a>
+      <a class="rv" href="#booking"><img src="img/icons/recovery.jpg" alt=""><h3>Device recovery</h3><p>Recover important data or securely factory-reset a device.</p></a>
+    </div>
+  </div>
+</section>
 
 <section id="services">
   <div class="wrap">
@@ -217,11 +103,11 @@ footer nav{position:static;background:none;border:0;backdrop-filter:none;display
 
 <section id="process">
   <div class="wrap">
-    <div class="head rv"><span class="pill">Process</span><h2>3 easy steps to a <span class="grad">finished setup</span></h2></div>
+    <div class="head rv"><span class="pill">How it works</span><h2>Our repairs are <span class="grad">simple</span></h2></div>
     <div class="steps">
-      <div class="step rv"><div class="n">01</div><h3>Book online</h3><p>Pick your service and a time slot that fits you.</p></div>
-      <div class="step rv"><div class="n">02</div><h3>We install</h3><p>A technician comes on site and sets everything up.</p></div>
-      <div class="step rv"><div class="n">03</div><h3>Ready to use</h3><p>We walk you through it and stay available for support.</p></div>
+      <div class="step rv"><div class="n">01</div><h3>Book online or call</h3><p>Pick a time for a free 15-minute call — we call you back and plan the visit.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>Diagnose & fix</h3><p>We run a $29 diagnostic (deducted from your repair) and give you a clear quote before any work.</p></div>
+      <div class="step rv"><div class="n">03</div><h3>Sit back & relax</h3><p>Your device is fixed and covered by our 90-day warranty.</p></div>
     </div>
   </div>
 </section>
@@ -248,32 +134,32 @@ footer nav{position:static;background:none;border:0;backdrop-filter:none;display
   </div>
 </section>
 
+<section id="faq">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">FAQ</span><h2>Frequently asked <span class="grad">questions</span></h2></div>
+    <div class="faq rv">
+      <details><summary>How much does a repair cost?</summary><p>It depends on the device and the part. Phone screen repairs start at $79. Every visit starts with a $29 diagnostic, which is deducted from the price of your repair. You always get a clear quote before we start, and nothing is done without your OK.</p></details>
+      <details><summary>How long does a repair take?</summary><p>Many phone and computer repairs are done the same day. If a part has to be ordered, it usually takes 2–5 business days — we keep you updated the whole time.</p></details>
+      <details><summary>Do you come to me?</summary><p>Yes. We work on site at your home or office across Broward and Miami-Dade counties for installations and most repairs.</p></details>
+      <details><summary>Is there a warranty?</summary><p>Every repair comes with a 90-day limited warranty on the parts we install and our labor. It doesn't cover new physical or liquid damage after the repair. See our <a href="/refund.html#warranty" style="color:var(--p2);text-decoration:underline">Refund & Warranty policy</a>.</p></details>
+      <details><summary>What happens to my data?</summary><p>We only access what's needed to repair and test your device. We still recommend backing up before any repair — and we can do the backup or data transfer for you.</p></details>
+      <details><summary>How can I pay?</summary><p>We accept major credit and debit cards through secure online checkout, sent after your quote is approved.</p></details>
+      <details><summary>Can I cancel or reschedule?</summary><p>Yes — free of charge up to 24 hours before your appointment, from your booking confirmation e-mail or by calling (954) 449-3719.</p></details>
+    </div>
+  </div>
+</section>
+
 <section id="booking">
   <div class="glow g2" style="top:80px;left:-120px;right:auto"></div>
   <div class="wrap">
-    <div class="head rv"><span class="pill">Online booking</span><h2>Book your <span class="grad">installation</span> in 1 minute</h2><p>Pick a time for a 15-minute call — we call you back to understand your needs and plan your installation.</p></div>
+    <div class="head rv"><span class="pill">Online booking</span><h2>Book your <span class="grad">appointment</span> in 1 minute</h2><p>Pick a time for a free 15-minute call — we call you back to understand your needs and plan your repair or installation.</p></div>
     <div class="cal rv"><div id="cal-inline" style="width:100%;min-height:560px;overflow:auto"></div></div>
   </div>
 </section>
 
-<footer id="contact"><div class="wrap">
-  <div><img src="img/logo-nav.png" alt="All Scope Holdings LLC" height="60" style="display:block;margin-bottom:10px">Serving Broward & Miami-Dade, Florida · <a href="mailto:contact@allscopeholdingsllc.com">contact@allscopeholdingsllc.com</a> · Support: <a href="mailto:support@allscopeholdingsllc.com">support@allscopeholdingsllc.com</a> · <a href="tel:+19544493719">+1 (954) 449-3719</a></div>
-  <nav><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Refund policy</a></nav>
-  <div style="flex-basis:100%;font-size:12px">As an Amazon Associate I earn from qualifying purchases.</div>
-  <div>© 2026 All Scope Holdings LLC</div>
-</div></footer>
+<div id="site-footer"></div>
 
-<script>
-// scroll reveal
-const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
-document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*0.1+'s';io.observe(el)});
-// counters
-const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count,t0=performance.now();
-  (function tick(t){const k=Math.min((t-t0)/1600,1);el.textContent=Math.round(end*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(tick)})(t0);co.unobserve(el)}),{threshold:.5});
-document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
-// live camera clocks
-const clk=()=>{const t=new Date().toLocaleString("en-US",{month:"2-digit",day:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false});document.querySelectorAll(".cam time").forEach(e=>e.textContent=t)};clk();setInterval(clk,1000);
-</script>
+<script src="/site.js?v=2"></script>
 <script>
 // Cal.com inline booking (official embed snippet)
 (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
