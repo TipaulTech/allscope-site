@@ -10,7 +10,7 @@
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css?v=3">
+<link rel="stylesheet" href="/style.css?v=4">
 </head>
 <body>
 <div class="stars"></div>
@@ -27,11 +27,11 @@
     </div>
     <div class="stage rv">
       <div class="panel p-main float">
-        <h4><span>Live security feed</span><span style="color:var(--ok)">● 4 cameras online</span></h4>
+        <h4><span>Live security feed</span><span class="online">4 cameras online</span></h4>
         <div class="cams"><div class="cam" style="background-image:url(img/cam-front.jpg)"><span>Front door</span><time></time></div><div class="cam" style="background-image:url(img/cam-driveway.jpg)"><span>Driveway</span><time></time></div><div class="cam" style="background-image:url(img/cam-office.jpg)"><span>Office</span><time></time></div><div class="cam" style="background-image:url(img/cam-backyard.jpg)"><span>Backyard</span><time></time></div></div>
       </div>
       <div class="panel p-net float d2"><small>Network speed</small><strong>940 <span style="font-size:13px;color:var(--muted)">Mbps</span></strong><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
-      <div class="panel p-book float d3"><div class="ic">✓</div><div><b>Installation booked</b><small>Tue · 10:00 AM · Network setup</small></div></div>
+      <div class="panel p-book float d3"><div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></div><div><b>Installation booked</b><small>Tue · 10:00 AM · Network setup</small></div></div>
     </div>
   </div>
   <div class="wrap full"><div class="stats rv">
@@ -134,7 +134,7 @@
 
 <div id="site-footer"></div>
 
-<script src="/site.js?v=3"></script>
+<script src="/site.js?v=4"></script>
 <script>
 // Cal.com inline booking (official embed snippet)
 (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
