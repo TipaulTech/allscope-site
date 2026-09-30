@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All Scope Holdings LLC — Tech Installation & Digital Projects</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#07061a; --bg2:#0d0b2b; --card:rgba(255,255,255,.04); --line:rgba(255,255,255,.09);
+  --text:#eceaff; --muted:#a09cc9; --p1:#6d5dfc; --p2:#9b8cff; --p3:#3fd0ff; --ok:#3ee6a0;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:Sora,sans-serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.grad{background:linear-gradient(90deg,var(--p2),var(--p3));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* background */
+.stars{position:fixed;inset:0;z-index:-2;background-image:radial-gradient(rgba(255,255,255,.35) 1px,transparent 1px);background-size:44px 44px;mask-image:radial-gradient(ellipse at top,#000 20%,transparent 75%);opacity:.35}
+.glow{position:absolute;border-radius:50%;filter:blur(90px);z-index:-1;pointer-events:none}
+.g1{width:560px;height:560px;background:#4b35ff55;top:-160px;left:50%;transform:translateX(-50%);animation:pulse 8s ease-in-out infinite}
+.g2{width:380px;height:380px;background:#2bb8ff33;top:320px;right:-120px;animation:pulse 10s ease-in-out infinite reverse}
+@keyframes pulse{50%{opacity:.55;transform:translateX(-50%) scale(1.12)}}
+.g2{animation-name:pulse2}@keyframes pulse2{50%{opacity:.5;transform:scale(1.15)}}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(7,6,26,.6);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px}
+.logo{display:flex;align-items:center;gap:10px;font-family:Sora;font-weight:800;font-size:18px}
+.links{display:flex;gap:28px;font-size:14px;color:var(--muted)}
+.links a:hover{color:#fff}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,var(--p1),#8a6bff);color:#fff;font-weight:600;font-size:14px;border:0;cursor:pointer;box-shadow:0 8px 30px #6d5dfc55;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 40px #6d5dfc88}
+.btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none}
+.btn.sm{padding:9px 18px}
+
+/* hero */
+.hero{position:relative;padding:90px 0 70px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center}
+.pill{display:inline-flex;gap:8px;align-items:center;padding:6px 14px;border:1px solid var(--line);border-radius:999px;font-size:12px;color:var(--muted);background:var(--card)}
+.pill b{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 10px var(--ok)}
+.hero h1{font-size:clamp(36px,5vw,58px);margin:20px 0 18px;font-weight:800}
+.hero p{color:var(--muted);font-size:17px;max-width:520px}
+.cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+
+/* hero visual */
+.stage{position:relative;height:440px}
+.panel{position:absolute;background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));border:1px solid var(--line);border-radius:18px;backdrop-filter:blur(10px);padding:18px;box-shadow:0 20px 60px rgba(0,0,0,.45)}
+.float{animation:float 6s ease-in-out infinite}
+.float.d2{animation-delay:-2s}.float.d3{animation-delay:-4s}
+@keyframes float{50%{transform:translateY(-14px)}}
+.p-main{inset:30px 40px 60px 30px}
+.p-main h4{font-size:13px;color:var(--muted);font-weight:500;display:flex;justify-content:space-between}
+.cams{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.cam{height:92px;border-radius:12px;background:linear-gradient(135deg,#1b1646,#0f1c3a);position:relative;overflow:hidden;border:1px solid var(--line)}
+.cam:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(109,93,252,.25),transparent);animation:scan 3.2s linear infinite}
+.cam:nth-child(2):after{animation-delay:-.8s}.cam:nth-child(3):after{animation-delay:-1.6s}.cam:nth-child(4):after{animation-delay:-2.4s}
+@keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
+.cam span{position:absolute;left:8px;top:6px;font-size:10px;color:#fff;display:flex;gap:5px;align-items:center}
+.cam span:before{content:"";width:6px;height:6px;border-radius:50%;background:#ff4d6d;animation:blink 1.2s infinite}
+@keyframes blink{50%{opacity:.2}}
+.p-net{right:0;top:0;width:190px}
+.p-net small{color:var(--muted);font-size:11px}
+.p-net strong{display:block;font-family:Sora;font-size:26px;margin:2px 0}
+.bars{display:flex;gap:5px;align-items:flex-end;height:44px}
+.bars i{flex:1;border-radius:4px;background:linear-gradient(var(--p2),var(--p1));animation:bar 2.4s ease-in-out infinite}
+.bars i:nth-child(2n){animation-delay:-.6s}.bars i:nth-child(3n){animation-delay:-1.2s}
+@keyframes bar{0%,100%{height:30%}50%{height:100%}}
+.p-book{left:0;bottom:0;width:230px;display:flex;gap:12px;align-items:center}
+.p-book .ic{width:40px;height:40px;border-radius:12px;background:#3ee6a022;display:grid;place-items:center;color:var(--ok)}
+.p-book b{font-size:13px;display:block}.p-book small{font-size:11px;color:var(--muted)}
+
+/* stats */
+.hero .wrap.full{display:block;margin-top:60px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:10px}
+.stat{padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--card)}
+.stat strong{font-family:Sora;font-size:30px}
+.stat p{color:var(--muted);font-size:13px}
+
+/* sections */
+section{padding:90px 0;position:relative}
+.head{text-align:center;max-width:640px;margin:0 auto 50px}
+.head .pill{margin-bottom:14px}
+.head h2{font-size:clamp(28px,3.6vw,42px);margin-bottom:12px}
+.head p{color:var(--muted)}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{position:relative;padding:28px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(160deg,rgba(255,255,255,.05),rgba(255,255,255,.01));overflow:hidden;transition:transform .3s,border-color .3s}
+.card:before{content:"";position:absolute;inset:-1px;border-radius:20px;padding:1px;background:linear-gradient(140deg,var(--p1),transparent 40%,transparent 60%,var(--p3));-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .3s}
+.card:hover{transform:translateY(-6px)}.card:hover:before{opacity:1}
+.card .ic{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;background:linear-gradient(135deg,#6d5dfc33,#3fd0ff22);margin-bottom:18px;color:var(--p2)}
+.card h3{font-size:19px;margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px}
+.card .price{margin-top:16px;font-size:13px;color:var(--p2);font-weight:600}
+.card ul{list-style:none;margin-top:12px;font-size:13px;color:var(--muted)}
+.card li:before{content:"✓  ";color:var(--ok)}
+.card .ph{margin:-28px -28px 22px;height:190px;background:linear-gradient(135deg,#1b1646,#0f1c3a) center/cover no-repeat;position:relative}
+.card .ph:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent 55%,rgba(7,6,26,.85))}
+.card .ph + .ic{margin-top:-48px;position:relative;z-index:1;background:#141038;border:1px solid var(--line)}
+
+/* shop */
+.shop{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.item{padding:0;display:flex;flex-direction:column}
+.item .ph{margin:0;height:170px}
+.item .body{padding:18px 20px 20px;display:flex;flex-direction:column;flex:1}
+.item h3{font-size:16px;margin-bottom:4px}
+.item p{font-size:13px;flex:1}
+.item .row{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+.item .row b{font-family:Sora;color:var(--p2)}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;position:relative}
+.steps:before{content:"";position:absolute;top:34px;left:16%;right:16%;height:1px;background:linear-gradient(90deg,transparent,var(--p1),var(--p3),transparent)}
+.step{text-align:center}
+.step .n{width:68px;height:68px;margin:0 auto 18px;border-radius:50%;display:grid;place-items:center;font-family:Sora;font-weight:700;background:var(--bg2);border:1px solid var(--p1);box-shadow:0 0 30px #6d5dfc55;position:relative}
+.step h3{font-size:17px;margin-bottom:6px}.step p{color:var(--muted);font-size:14px}
+
+/* projects */
+.feat{display:grid;grid-template-columns:1.2fr 1fr;gap:40px;align-items:center;padding:40px}
+.feat .tag{display:inline-block;font-size:11px;padding:4px 10px;border-radius:999px;background:#6d5dfc33;color:var(--p2);margin-bottom:14px}
+.feat h3{font-size:30px}
+.feat .art{position:absolute;right:-60px;top:-60px;width:320px;height:320px;border-radius:50%;background:radial-gradient(circle,#6d5dfc55,transparent 70%)}
+.plans{display:grid;gap:10px;position:relative}
+.plans div{display:grid;grid-template-columns:90px 1fr auto;align-items:center;padding:14px 18px;border:1px solid var(--line);border-radius:14px;background:rgba(7,6,26,.5);font-size:14px}
+.plans span{color:var(--muted)}.plans em{font-style:normal;font-family:Sora;font-weight:600;color:var(--p2)}
+.plans small{color:var(--muted);font-size:12px;text-align:right}
+
+/* booking */
+.cal{padding:24px;border:1px solid var(--line);border-radius:22px;background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.01))}
+
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+footer nav{position:static;background:none;border:0;backdrop-filter:none;display:flex;gap:18px}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(40px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .hero .wrap{grid-template-columns:1fr}
+  .grid3,.steps,.stats,.shop{grid-template-columns:1fr 1fr}
+  .feat{grid-template-columns:1fr;padding:28px}
+  .links{display:none}
+  .steps:before{display:none}
+}
+@media (max-width:560px){.grid3,.steps,.stats,.shop{grid-template-columns:1fr}.stage{height:460px}.p-main{inset:90px 0 70px 0}.p-net{width:170px;padding:14px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+
+<nav><div class="wrap">
+  <a class="logo" href="#"><img src="img/logo-nav.png" alt="All Scope Holdings" height="52"></a>
+  <div class="links"><a href="#services">Services</a><a href="#shop">Shop</a><a href="#process">Process</a><a href="#projects">My Projects</a><a href="#booking">Booking</a><a href="#contact">Contact</a></div>
+  <a class="btn sm" href="#booking">Book now →</a>
+</div></nav>
+
+<header class="hero">
+  <div class="glow g1"></div><div class="glow g2"></div>
+  <div class="wrap">
+    <div class="rv">
+      <span class="pill"><b></b> Now booking installations</span>
+      <h1>Smart tech, <span class="grad">installed right</span> the first time.</h1>
+      <p>All Scope Holdings LLC installs security cameras, business networks and Wi-Fi, and sets up phones and laptops — plus builds digital products like GPC Studio.</p>
+      <div class="cta"><a class="btn" href="#booking">Book a service →</a><a class="btn ghost" href="#projects">See our projects</a></div>
+    </div>
+    <div class="stage rv">
+      <div class="panel p-main float">
+        <h4><span>Live security feed</span><span style="color:var(--ok)">● 4 cameras online</span></h4>
+        <div class="cams"><div class="cam"><span>Front door</span></div><div class="cam"><span>Driveway</span></div><div class="cam"><span>Office</span></div><div class="cam"><span>Backyard</span></div></div>
+      </div>
+      <div class="panel p-net float d2"><small>Network speed</small><strong>940 <span style="font-size:13px;color:var(--muted)">Mbps</span></strong><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
+      <div class="panel p-book float d3"><div class="ic">✓</div><div><b>Installation booked</b><small>Tue · 10:00 AM · Network setup</small></div></div>
+    </div>
+  </div>
+  <div class="wrap full"><div class="stats rv">
+    <div class="stat"><strong data-count="250">0</strong><strong>+</strong><p>Devices installed</p></div>
+    <div class="stat"><strong data-count="98">0</strong><strong>%</strong><p>Customer satisfaction</p></div>
+    <div class="stat"><strong data-count="24">0</strong><strong>h</strong><p>Average response time</p></div>
+    <div class="stat"><strong data-count="3">0</strong><strong>+</strong><p>Digital products</p></div>
+  </div></div>
+</header>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">Services</span><h2>Everything you need, <span class="grad">set up by pros</span></h2><p>Clean installs, clear pricing, and support after the job is done.</p></div>
+    <div class="grid3">
+      <div class="card rv"><div class="ph" style="background-image:url(img/cameras.jpg)"></div><div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h14l5-3v14l-5-3H3z"/><circle cx="10" cy="12" r="2.5"/></svg></div><h3>Security Cameras</h3><p>Indoor and outdoor camera systems with remote viewing on your phone.</p><ul><li>Site survey & placement</li><li>NVR / cloud setup</li><li>Mobile app access</li></ul><div class="price">From $XXX</div></div>
+      <div class="card rv"><div class="ph" style="background-image:url(img/network.jpg)"></div><div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 9a15 15 0 0 1 22 0M5.5 12.5a10 10 0 0 1 15 0M9 16a5 5 0 0 1 8 0"/><circle cx="13" cy="20" r="1.3" fill="currentColor"/></svg></div><h3>Network & Wi-Fi</h3><p>Home and small-business networks, mesh Wi-Fi and cabling that just works.</p><ul><li>Router & mesh install</li><li>Ethernet cabling</li><li>Security & guest network</li></ul><div class="price">From $XXX</div></div>
+      <div class="card rv"><div class="ph" style="background-image:url(img/phone-repair.jpg)"></div><div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="16" height="11" rx="2"/><path d="M1 20h20"/><rect x="19" y="9" width="6" height="11" rx="1.5"/></svg></div><h3>Phone & Laptop Repair</h3><p>Cracked screens, batteries, setup and data transfer for your everyday devices.</p><ul><li>Screen replacement</li><li>Data transfer & backup</li><li>Repair & optimization</li></ul><div class="price">From $XX</div></div>
+      <div class="card rv"><div class="ph" style="background-image:url(img/youtube.jpg)"></div><div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="5" width="22" height="16" rx="4"/><path d="M11 9.5v7l6-3.5z" fill="currentColor"/></svg></div><h3>YouTube Channel Consulting</h3><p>Strategy, content and tools to launch or grow your YouTube channel.</p><ul><li>Channel audit & strategy</li><li>Content & thumbnail plan</li><li>AI video workflow</li></ul><div class="price">From $XX</div></div>
+      <div class="card rv"><div class="ph" style="background-image:url(img/app-dev.jpg)"></div><div class="ic"><svg width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 7l-5 6 5 6M17 7l5 6-5 6M14 5l-2 16"/></svg></div><h3>App Creation</h3><p>Custom web apps and tools for your business, from idea to launch.</p><ul><li>Web & mobile-friendly apps</li><li>AI features</li><li>Hosting & maintenance</li></ul><div class="price">From $XXX</div></div>
+      <div class="card rv" style="display:flex;flex-direction:column;justify-content:center;text-align:center"><h3>Need something else?</h3><p>Tell us about your project — we'll call you back within 24h.</p><div style="margin-top:20px"><a class="btn" href="#booking">Book a call →</a></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="shop">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">Shop</span><h2>Quality <span class="grad">equipment</span>, ready to install</h2><p>The same gear we use on our jobs. Buy it alone or add installation.</p></div>
+    <div class="shop">
+      <div class="card item rv"><div class="ph" style="background-image:url(img/shop-camera.jpg)"></div><div class="body"><h3>4K Security Camera</h3><p>Night vision, weatherproof, app access.</p><div class="row"><b>$XX</b><a class="btn sm" href="#booking">Order</a></div></div></div>
+      <div class="card item rv"><div class="ph" style="background-image:url(img/shop-kit.jpg)"></div><div class="body"><h3>4-Camera NVR Kit</h3><p>Complete recording system for home or shop.</p><div class="row"><b>$XXX</b><a class="btn sm" href="#booking">Order</a></div></div></div>
+      <div class="card item rv"><div class="ph" style="background-image:url(img/shop-screen.jpg)"></div><div class="body"><h3>Replacement Screens</h3><p>iPhone, Samsung and more — installed or shipped.</p><div class="row"><b>From $XX</b><a class="btn sm" href="#booking">Order</a></div></div></div>
+      <div class="card item rv"><div class="ph" style="background-image:url(img/shop-wifi.jpg)"></div><div class="body"><h3>Mesh Wi-Fi Router</h3><p>Whole-home coverage, no dead zones.</p><div class="row"><b>$XXX</b><a class="btn sm" href="#booking">Order</a></div></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">Process</span><h2>3 easy steps to a <span class="grad">finished setup</span></h2></div>
+    <div class="steps">
+      <div class="step rv"><div class="n">01</div><h3>Book online</h3><p>Pick your service and a time slot that fits you.</p></div>
+      <div class="step rv"><div class="n">02</div><h3>We install</h3><p>A technician comes on site and sets everything up.</p></div>
+      <div class="step rv"><div class="n">03</div><h3>Ready to use</h3><p>We walk you through it and stay available for support.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="wrap">
+    <div class="head rv"><span class="pill">My Projects</span><h2>Our <span class="grad">digital projects</span></h2><p>Products we build and run.</p></div>
+    <a class="card feat rv" href="https://gpcstudio.app" target="_blank" rel="noopener">
+      <div class="art"></div>
+      <div>
+        <span class="tag">SaaS · AI</span>
+        <h3>GPC Studio</h3>
+        <p>AI-powered video creation studio for YouTube creators: prompt generator, bulk images, text-to-speech, audio transcripts, royalty-free music and automatic video editing — all in one place.</p>
+        <span class="btn" style="margin-top:22px">Open GPC Studio →</span>
+      </div>
+      <div class="plans">
+        <div><b>Free</b><span>10 credits / mo</span><em>$0</em></div>
+        <div><b>Creator</b><span>400 credits / mo</span><em>$5/mo</em></div>
+        <div><b>Growth</b><span>2,000 credits / mo</span><em>$15/mo</em></div>
+        <div><b>Scale</b><span>9,000 credits / mo</span><em>$49/mo</em></div>
+        <small>Yearly billing saves 25%.</small>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="glow g2" style="top:80px;left:-120px;right:auto"></div>
+  <div class="wrap">
+    <div class="head rv"><span class="pill">Online booking</span><h2>Book your <span class="grad">installation</span> in 1 minute</h2><p>Pick a time for a 15-minute call — we call you back to understand your needs and plan your installation.</p></div>
+    <div class="cal rv"><div id="cal-inline" style="width:100%;min-height:560px;overflow:auto"></div></div>
+  </div>
+</section>
+
+<footer id="contact"><div class="wrap">
+  <div><img src="img/logo-nav.png" alt="All Scope Holdings LLC" height="60" style="display:block;margin-bottom:10px">[Address] · [Email] · [Phone]</div>
+  <nav><a href="#">Terms</a><a href="#">Privacy</a><a href="#">Refund policy</a></nav>
+  <div>© 2026 All Scope Holdings LLC</div>
+</div></footer>
+
+<script>
+// scroll reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.15});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*0.1+'s';io.observe(el)});
+// counters
+const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count,t0=performance.now();
+  (function tick(t){const k=Math.min((t-t0)/1600,1);el.textContent=Math.round(end*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(tick)})(t0);co.unobserve(el)}),{threshold:.5});
+document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+</script>
+<script>
+// Cal.com inline booking (official embed snippet)
+(function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+Cal("init", "book-an-appointment", { origin: "https://cal.com" });
+Cal.ns["book-an-appointment"]("inline", { elementOrSelector: "#cal-inline", calLink: "guerino-constant/book-an-appointment", config: { layout: "month_view", theme: "dark" } });
+Cal.ns["book-an-appointment"]("ui", { theme: "dark", cssVarsPerTheme: { dark: { "cal-brand": "#6d5dfc" } }, layout: "month_view" });
+</script>
+</body>
+</html>
