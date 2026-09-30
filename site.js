@@ -10,7 +10,7 @@ const MENUS = [
       ['tablet', 'Tablet', 'iPad & Android tablets', '/repairs.html'],
       ['computer', 'Computer', 'Laptops & desktops', '/repairs.html'],
       ['console', 'Game console', 'Controllers, ports, overheating', '/repairs.html'],
-      ['other', 'Something else', 'Smartwatches, headphones & more', '/repairs.html'],
+      ['gadgets', 'Something else', 'Smartwatches, drones, audio & more', '/repairs.html'],
       ['warranty', '90-day warranty', 'Parts & labor covered', '/refund.html#warranty'],
     ] },
   { label: 'Services', cols: 4,
