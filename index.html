@@ -59,11 +59,12 @@ nav .wrap{display:flex;align-items:center;justify-content:space-between;height:6
 .p-main{inset:30px 40px 60px 30px}
 .p-main h4{font-size:13px;color:var(--muted);font-weight:500;display:flex;justify-content:space-between}
 .cams{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
-.cam{height:92px;border-radius:12px;background:linear-gradient(135deg,#1b1646,#0f1c3a);position:relative;overflow:hidden;border:1px solid var(--line)}
+.cam{height:92px;border-radius:12px;background:linear-gradient(135deg,#1b1646,#0f1c3a) center/cover no-repeat;position:relative;overflow:hidden;border:1px solid var(--line)}
+.cam time{position:absolute;right:8px;bottom:5px;font:600 9px/1 ui-monospace,Consolas,monospace;color:#fff;text-shadow:0 1px 2px #000;opacity:.9}
 .cam:after{content:"";position:absolute;inset:0;background:linear-gradient(transparent,rgba(109,93,252,.25),transparent);animation:scan 3.2s linear infinite}
 .cam:nth-child(2):after{animation-delay:-.8s}.cam:nth-child(3):after{animation-delay:-1.6s}.cam:nth-child(4):after{animation-delay:-2.4s}
 @keyframes scan{from{transform:translateY(-100%)}to{transform:translateY(100%)}}
-.cam span{position:absolute;left:8px;top:6px;font-size:10px;color:#fff;display:flex;gap:5px;align-items:center}
+.cam span{position:absolute;left:8px;top:6px;font-size:10px;color:#fff;text-shadow:0 1px 2px #000;display:flex;gap:5px;align-items:center}
 .cam span:before{content:"";width:6px;height:6px;border-radius:50%;background:#ff4d6d;animation:blink 1.2s infinite}
 @keyframes blink{50%{opacity:.2}}
 .p-net{right:0;top:0;width:190px}
@@ -149,7 +150,7 @@ footer nav{position:static;background:none;border:0;backdrop-filter:none;display
   .links{display:none}
   .steps:before{display:none}
 }
-@media (max-width:560px){.grid3,.steps,.stats,.shop{grid-template-columns:1fr}.stage{height:460px}.p-main{inset:90px 0 70px 0}.p-net{width:170px;padding:14px}}
+@media (max-width:560px){.grid3,.steps,.stats,.shop{grid-template-columns:1fr}.stage{height:520px}.p-main{inset:135px 0 60px 0}.p-net{width:170px;padding:14px}}
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
 </style>
 </head>
@@ -174,7 +175,7 @@ footer nav{position:static;background:none;border:0;backdrop-filter:none;display
     <div class="stage rv">
       <div class="panel p-main float">
         <h4><span>Live security feed</span><span style="color:var(--ok)">● 4 cameras online</span></h4>
-        <div class="cams"><div class="cam"><span>Front door</span></div><div class="cam"><span>Driveway</span></div><div class="cam"><span>Office</span></div><div class="cam"><span>Backyard</span></div></div>
+        <div class="cams"><div class="cam" style="background-image:url(img/cam-front.jpg)"><span>Front door</span><time></time></div><div class="cam" style="background-image:url(img/cam-driveway.jpg)"><span>Driveway</span><time></time></div><div class="cam" style="background-image:url(img/cam-office.jpg)"><span>Office</span><time></time></div><div class="cam" style="background-image:url(img/cam-backyard.jpg)"><span>Backyard</span><time></time></div></div>
       </div>
       <div class="panel p-net float d2"><small>Network speed</small><strong>940 <span style="font-size:13px;color:var(--muted)">Mbps</span></strong><div class="bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></div>
       <div class="panel p-book float d3"><div class="ic">✓</div><div><b>Installation booked</b><small>Tue · 10:00 AM · Network setup</small></div></div>
@@ -270,6 +271,8 @@ document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)
 const co=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;const el=e.target,end=+el.dataset.count,t0=performance.now();
   (function tick(t){const k=Math.min((t-t0)/1600,1);el.textContent=Math.round(end*(1-Math.pow(1-k,3)));if(k<1)requestAnimationFrame(tick)})(t0);co.unobserve(el)}),{threshold:.5});
 document.querySelectorAll('[data-count]').forEach(el=>co.observe(el));
+// live camera clocks
+const clk=()=>{const t=new Date().toLocaleString("en-US",{month:"2-digit",day:"2-digit",year:"numeric",hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:false});document.querySelectorAll(".cam time").forEach(e=>e.textContent=t)};clk();setInterval(clk,1000);
 </script>
 <script>
 // Cal.com inline booking (official embed snippet)
