@@ -262,3 +262,6 @@ section{padding:56px 0;position:relative}
 .solo .mc .i{height:auto;aspect-ratio:16/10;background-position:top left}
 .solo .mc b{font-size:17px}
 @media (max-width:980px){.mega-grid.solo{grid-template-columns:1fr}}
+a.card{display:block;color:inherit}
+.card .go{display:inline-flex;margin-top:14px;font-size:13px;font-weight:600;color:#fff;padding:9px 16px;border-radius:999px;background:linear-gradient(90deg,var(--p1),#8a6bff);box-shadow:0 6px 20px #6d5dfc44}
+.card .price+.go{margin-left:0}
